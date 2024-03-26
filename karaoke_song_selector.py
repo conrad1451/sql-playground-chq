@@ -1,4 +1,20 @@
-CREATE TABLE songs (
+# Source for hands on tutorial that doesn't leave one stuck in a learning loop
+# https://www.freecodecamp.org/news/sqlite-python-beginners-tutorial/
+
+from cs50 import SQL
+
+
+db = SQL("sqlite:///database.db")
+
+db.execute("CREATE TABLE IF NOT EXISTS users(name TEXT, age NUMBER, fav_food STRING)")
+
+db.execute("INSERT INTO users(name, age, fav_food) VALUES(?, ?, ?)", "eesa", 14, "pizza")
+
+db.execute("INSERT INTO users(name, age, fav_food) VALUES(?, ?, ?)", "Conrad", 24, "jollof rice
+
+           
+           
+           CREATE TABLE songs (
     id INTEGER PRIMARY KEY,
     title TEXT,
     artist TEXT,
